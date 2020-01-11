@@ -12,6 +12,7 @@
     "ts-node": "^8.3.0",
     "typescript": "~3"
   },
+  "repository": "andymatuschak/note-link-janitor",
   "dependencies": {
     "@types/mdast": "^3.0.3",
     "pagerank.js": "^1.0.2",
