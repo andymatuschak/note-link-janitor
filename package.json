@@ -1,5 +1,5 @@
 {
-  "name": "note-link-janitor",
+  "name": "@andymatuschak/note-link-janitor",
   "version": "0.0.1",
   "author": "Andy Matuschak",
   "main": "out/index.js",
