@@ -1,0 +1,40 @@
+{
+  "name": "note-link-janitor",
+  "version": "0.0.1",
+  "author": "Andy Matuschak",
+  "main": "out/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@paperist/types-remark": "^0.1.3",
+    "@types/node": "^12.6.6",
+    "@types/unist": "^2.0.3",
+    "prettier": "~1",
+    "ts-node": "^8.3.0",
+    "typescript": "~3"
+  },
+  "dependencies": {
+    "@types/mdast": "^3.0.3",
+    "pagerank.js": "^1.0.2",
+    "remark": "^11.0.1",
+    "remark-parse": "~7",
+    "remark-stringify": "~7",
+    "remark-wiki-link": "^0.0.4",
+    "unified": "^8.4.0",
+    "unist-util-find": "^1.0.1",
+    "unist-util-is": "^4.0.0",
+    "unist-util-visit-parents": "^3.0.1"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p . --outDir dist && chmod +x dist/index.js"
+  },
+  "bin": {
+    "note-link-janitor": "./dist/index.js"
+  },
+  "files": [
+    "Readme.md",
+    "dist/**/*"
+  ]
+}
