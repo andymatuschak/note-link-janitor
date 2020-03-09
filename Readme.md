@@ -20,7 +20,7 @@ The backlinks section will be initially inserted at the end of the file. If ther
 ## Assumptions/warnings
 
 1. Links are formatted `[[like this]]`.
-2. Note titles are inferred from filenames. That is: if a file named `Note A.md` contains the text `[[Note B]]`, then a backlink to `Note A` will be added to the file named `Note B.md`. No special handling is yet present for special characters in filenames.
+2. Note titles are inferred from the first line of each note, which is assumed to be formatted as a heading, i.e. `# Note title`.
 3. All `.md` files are siblings; the script does not currently recursively traverse subtrees (though that would be a simple modification if you need it; see `lib/readAllNotes.ts`)
 4. The backlinks "section" is defined as the AST span between `## Backlinks` and the next heading tag (or `<!-- -->` tag). Any text you might add to this section will be clobbered. Don't append text after the backlinks list without a heading in between! (I like to leave my backlinks list at the end of the file)
 
