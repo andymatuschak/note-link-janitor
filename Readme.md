@@ -26,7 +26,7 @@ The backlinks section will be initially inserted at the end of the file. If ther
 
 ### This is FYI-style open source
 
-This is FYI-style open source. I'm sharing it for interested parties, but without any stewardship commitment. Assume that my default response to issues and pull requests will by to ignore or close them without comment. If you do something interesting with this, though, [please let me know](mailto:andy@andymatuschak.org).
+This is FYI-style open source. I'm sharing it for interested parties, but without any stewardship commitment. Assume that my default response to issues and pull requests will be to ignore or close them without comment. If you do something interesting with this, though, [please let me know](mailto:andy@andymatuschak.org).
 
 ## Usage
 
