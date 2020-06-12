@@ -56,3 +56,7 @@ yarn run build
 ## Future work
 
 In the future, I intend to expand this project to monitor for broken links, orphans, and other interesting hypertext-y predicates.
+
+---
+
+Arthur Perret [has localized this tool into French](https://github.com/infologie/note-link-janitor-fr).
