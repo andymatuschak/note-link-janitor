@@ -28,7 +28,7 @@ export default function getBacklinksBlock(
   );
   if (existingBacklinksNodeIndex === -1) {
     const insertionPoint =
-      tree.children.find(node => is(node, isClosingMatterNode)) || null;
+      tree.children.slice().reverse().find(node => is(node, isClosingMatterNode)) || null;
     return {
       isPresent: false,
       insertionPoint
