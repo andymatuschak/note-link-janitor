@@ -10,6 +10,10 @@ export interface BacklinkEntry {
   context: MDAST.BlockContent[];
 }
 
+function ensureSingleNewlineAtEnd(contents: string): string {
+  return contents.trimEnd() + "\n";
+}  
+
 export default function updateBacklinks(
   tree: MDAST.Root,
   noteContents: string,
@@ -73,7 +77,7 @@ export default function updateBacklinks(
         }
       ]
     };
-    backlinksString = `## Backlinks\n${backlinks
+    backlinksString = `\n## Backlinks\n${backlinks
       .map(
         entry =>
           `* [[${entry.sourceTitle}]]\n${entry.context
@@ -82,11 +86,11 @@ export default function updateBacklinks(
             )
             .join("")}`
       )
-      .join("")}\n`;
+      .join("")}`;
   }
 
   const newNoteContents =
-    noteContents.slice(0, insertionOffset) +
+    ensureSingleNewlineAtEnd(noteContents.slice(0, insertionOffset)) +
     backlinksString +
     noteContents.slice(oldEndOffset);
 
