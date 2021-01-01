@@ -42,7 +42,8 @@ Then to run it (note that it will modify your `.md` files _in-place_; you may wa
 note-link-janitor path/to/folder/containing/md/files
 ```
 
-That will run it once; you'll need to create a cron job or a launch daemon to run it regularly.
+That will run it once; you'll need to create a cron job or a launch daemon to run it regularly. 
+If you prefer running note-link-janitor on every push to the repository that contains the md files, incorporate this [Github Actions Workflow](https://gist.github.com/rajesh-s/749c99ef9e7c884828a1acda698e477b) in your repo.
 
 It's built to run against Node >=12, so you may need to upgrade or swap your runtime version.
 
