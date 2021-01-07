@@ -44,6 +44,8 @@ note-link-janitor path/to/folder/containing/md/files
 
 That will run it once; you'll need to create a cron job or a launch daemon to run it regularly.
 
+If you store your notes in a Git repository and would like to run note-link-janitor on every push, see this [Github Actions Workflow](https://gist.github.com/rajesh-s/749c99ef9e7c884828a1acda698e477b) from [Rajesh Shashi Kumar](https://github.com/rajesh-s).
+
 It's built to run against Node >=12, so you may need to upgrade or swap your runtime version.
 
 ## Building a local copy
