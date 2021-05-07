@@ -46,7 +46,7 @@ export default async function readAllNotes(
     withFileTypes: true
   });
   const notePaths = noteDirectoryEntries
-    .filter(entry => entry.isFile() && !entry.name.startsWith(".") && entry.name.endsWith(".md"))
+    .filter(entry => entry.isFile() && !entry.name.startsWith(".") && entry.name.endsWith(".md") && !entry.name.startsWith("_"))
     .map(entry => path.join(noteFolderPath, entry.name));
 
   const noteEntries = await Promise.all(

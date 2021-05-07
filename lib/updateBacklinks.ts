@@ -78,17 +78,29 @@ export default function updateBacklinks(
         entry =>
           `* [[${entry.sourceTitle}]]\n${entry.context
             .map(
-              block => `\t* ${processor.stringify(block).replace(/\n.+/, "")}\n`
+              block => `  * ${processor.stringify(block).replace(/\n.+/, "")}\n`
             )
             .join("")}`
       )
-      .join("")}\n`;
+      .join("")}`.trim();
   }
 
-  const newNoteContents =
-    noteContents.slice(0, insertionOffset) +
-    backlinksString +
-    noteContents.slice(oldEndOffset);
+  let newNoteContents = noteContents;
+
+  if (backlinksString) {
+    let end = noteContents.slice(oldEndOffset).trim();
+
+    if (end) {
+      end = `\n${end}\n`;
+    }
+
+    newNoteContents =
+      noteContents.slice(0, insertionOffset).trimEnd() +
+      "\n\n" +
+      backlinksString +
+      "\n" +
+      end;
+  }
 
   return newNoteContents;
 }
